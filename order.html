@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LexxPizza - Order</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo"><img src="c:\Users\User\Documents\WMD ASSIGNMENT2026\logo.png" alt="LexxPizza"></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="order.html">Order <span class="cart-badge">0</span></a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero" style="background-image: url('https://picsum.photos/seed/order-pizza/1600/900.jpg'); height: 40vh;">
+        <div class="hero-content" data-aos="fade-up">
+            <h1>Your Order</h1>
+            <p>Fill in your details to complete the order</p>
+        </div>
+    </div>
+
+    <div class="page-bg" style="padding: 30px 20px;">
+
+        <!-- ORDER SUMMARY BOX -->
+        <div class="blur-box" data-aos="fade-up" style="max-width: 700px; margin: 0 auto;">
+
+            <h3 style="color: #ff6600; margin-bottom: 15px;">📦 Order Summary</h3>
+            <table class="order-table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody id="order-items">
+                </tbody>
+            </table>
+            <p class="total-row" id="order-total">Total: P0.00</p>
+
+            <div style="text-align:center; margin-bottom: 20px;">
+                <a href="menu.html" class="btn" style="font-size: 14px; padding: 8px 20px;">← Back to Menu</a>
+            </div>
+
+        </div>
+
+        <!-- DELIVERY FORM WITH FORMSPREE -->
+        <div class="blur-box" data-aos="fade-up" style="max-width: 700px; margin: 20px auto;">
+
+            <h3 style="color: #ff6600; margin-bottom: 15px;">📝 Delivery Details</h3>
+            
+            <!-- REPLACE xpwdqkln WITH YOUR REAL FORMSPREE FORM ID -->
+            <form class="order-form" action="https://formspree.io/f/xpwdqkln" method="POST" onsubmit="submitOrder(event)">
+
+                <!-- Hidden fields that send cart data to your email -->
+                <input type="hidden" name="_subject" value="New LexxPizza Order">
+                <input type="hidden" name="order_items" id="hidden-items">
+                <input type="hidden" name="order_total" id="hidden-total">
+
+                <label>Full Name</label>
+                <input type="text" name="name" placeholder="e.g. Thabo Moyo" required>
+
+                <label>Phone Number</label>
+                <input type="tel" name="phone" placeholder="e.g. 71 234 567" required>
+
+                <label>Address</label>
+                <input type="text" name="address" placeholder="e.g. 123 Main Mall, Gaborone" required>
+
+                <label>Payment Method</label>
+                <select name="payment" required>
+                    <option value="">Choose...</option>
+                    <option value="cash">Cash on Delivery</option>
+                    <option value="mobile">Mobile Money</option>
+                    <option value="card">Card</option>
+                </select>
+
+                <label>Special Instructions</label>
+                <textarea name="instructions" rows="3" placeholder="Any special requests?"></textarea>
+
+                <div style="text-align:center;">
+                    <button type="submit" class="btn" style="font-size:18px; padding: 14px 40px;">Place Order</button>
+                </div>
+
+            </form>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2025 LexxPizza. All rights reserved. | <a href="contact.html">Contact Us</a></p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000 });
+    </script>
+    <script src="script.js"></script>
+
+</body>
+</html>

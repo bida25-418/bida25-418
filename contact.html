@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LexxPizza - Contact</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="logo"><img src="c:\Users\User\Documents\WMD ASSIGNMENT2026\logo.png" alt="LexxPizza"></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="order.html">Order <span class="cart-badge">0</span></a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero" style="background-image: url('https://picsum.photos/seed/contact-rest/1600/900.jpg'); height: 40vh;">
+        <div class="hero-content" data-aos="fade-up">
+            <h1>Contact Us Bua le rona</h1>
+            <p>We'd love to hear from you</p>
+        </div>
+    </div>
+
+    <div class="page-bg" style="padding: 30px 20px;">
+
+        <div class="contact-grid">
+
+            <div class="blur-box contact-info" data-aos="fade-right">
+                <h3 style="color: #ff6600; margin-bottom: 20px;">Get In Touch</h3>
+
+                <div class="icon-row">
+                    <img src="https://picsum.photos/seed/loc-icon/60/60.jpg" class="round-icon-small" alt="Location">
+                    <p>123 FairGrounds, Tlokweng, Botswana</p>
+                </div>
+
+                <div class="icon-row">
+                    <img src="https://picsum.photos/seed/phone-icon/60/60.jpg" class="round-icon-small" alt="Phone">
+                    <p>+267 71 234 567</p>
+                </div>
+
+                <div class="icon-row">
+                    <img src="https://picsum.photos/seed/email-icon/60/60.jpg" class="round-icon-small" alt="Email">
+                    <p>thabangleonard123@gmail.com</p>
+                </div>
+
+                <div class="icon-row">
+                    <img src="https://picsum.photos/seed/clock-icon/60/60.jpg" class="round-icon-small" alt="Hours">
+                    <p>Mon - Sun: 10:00 AM - 10:00 PM</p>
+                </div>
+            </div>
+
+            <div class="blur-box contact-form" data-aos="fade-left">
+                <h3 style="color: #ff6600; margin-bottom: 20px;">Send a Message</h3>
+                
+                <form action="https://formspree.io/f/mnjldngv" method="POST" onsubmit="submitContact(event)">
+
+                    <input type="hidden" name="_subject" value="New LexxPizza Contact Message">
+
+                    <label>Your Name</label>
+                    <input type="text" name="name" placeholder="Enter your name" required>
+
+                    <label>Your Email</label>
+                    <input type="email" name="email" placeholder="Enter your email" required>
+
+                    <label>Message</label>
+                    <textarea name="message" rows="4" placeholder="Write your message here..." required style="width:100%; padding:12px; margin-bottom:15px; border:1px solid #ddd; border-radius:10px; font-size:16px; background:rgba(255,255,255,0.5);"></textarea>
+
+                    <button type="submit" class="btn">Send Message</button>
+
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2025 LexxPizza. All rights reserved. | <a href="contact.html">Contact Us</a></p>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000 });
+    </script>
+    <script src="script.js"></script>
+
+</body>
+</html>
