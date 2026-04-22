@@ -6,13 +6,13 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #fff5ee;
+    background-color: white;
     color: #333;
 }
 
 /* NAVBAR */
 nav {
-    background-color: #ff6600;
+    background-color: orangered;
     padding: 15px 30px;
     display: flex;
     justify-content: space-between;
@@ -45,16 +45,16 @@ nav .nav-links a {
 }
 
 nav .nav-links a:hover {
-    background-color: #fff;
+    background-color: white;
     color: #ff6600;
 }
 
 /* BLURRY BOX */
 .blur-box {
-    background: rgba(255, 255, 255, 0.25);
+    background: rgba(26, 24, 24 );
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255 );
     border-radius: 16px;
     padding: 30px;
     margin: 20px;
@@ -78,6 +78,11 @@ nav .nav-links a:hover {
     background-color: #e65c00;
     transform: scale(1.05);
 }
+.glass {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
 
 /* HERO SECTIONS WITH IMAGE BACKGROUND */
 .hero {
@@ -134,7 +139,7 @@ nav .nav-links a:hover {
     height: 80px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #ff6600;
+    border: 3px solid orange;
     display: block;
     margin: 0 auto 10px;
 }
@@ -254,7 +259,7 @@ nav .nav-links a:hover {
     border: 1px solid #ddd;
     border-radius: 10px;
     font-size: 16px;
-    background: rgba(255,255,255,0.5);
+    background: rgba(211, 55, 55, 0.5);
 }
 
 .order-form input:focus,
@@ -385,7 +390,7 @@ footer a {
 /* BACKGROUND PATTERN FOR NON-HERO PAGES */
 .page-bg {
     min-height: 100vh;
-    background: linear-gradient(135deg, #fff5ee 0%, #ffe0c2 50%, #fff5ee 100%);
+    background: linear-gradient(135deg, #c06b2e 0%, #bd844b 50%, #c98759 100%);
 }
 
 /* RESPONSIVE */
